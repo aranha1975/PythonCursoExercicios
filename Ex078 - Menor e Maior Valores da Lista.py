@@ -1,12 +1,20 @@
 valores=[]
-for c in range(1,6):
-    valores.append(int(input(f'Digite o {c}º valor: ')))
-maior=menor=valores[0]
+for c in range(0,5):
+    valores.append(int(input(f'Digite o valor para a posicao {c}: ')))
+    posicao = c
+'''maior=menor=valores[0]
+posicao=0'''
 
 for n in valores:
-    if n>maior:
+    if n == 0:
+        maior=menor=valores[0]
+    if n > maior:
         maior=n
-    if n<menor:
+        posmaior=valores[n]
+    if n < menor:
         menor=n
-print(f'O maior número digitado foi: {maior} e ele está na {valores.index(maior)+1}ª posição ')
-print(f'O menor número digitado foi: {menor} e ele está na {valores.index(menor)+1}ª posição ')
+        posmenor=valores[n]
+
+print(f'Você digitou os valores {valores}')
+print(f'O maior número digitado foi: {maior} e ele está na posição: {posicaomaior}')
+print(f'O menor número digitado foi: {menor} e ele está na posição: {posicaomenor}')
